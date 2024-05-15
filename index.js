@@ -2,6 +2,7 @@ const http = require("http");
 const fs = require("fs");
 
 const server = http.createServer((req, res) => {
+  console.log(req.url);
   if (req.url === "/") {
     fs.readFile("./index.html", (err, data) => {
       if (err) throw err;
